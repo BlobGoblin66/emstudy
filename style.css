@@ -32,3 +32,13 @@ body, html {
     z-index: 10;  /* always on top */
 }
 
+#spotify-player {
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+#spotify-player:hover {
+    opacity: 1;
+}
+
+
