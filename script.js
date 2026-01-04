@@ -11,7 +11,7 @@ const images = [
 // 2. SLIDESHOW SETTINGS
 // -------------------------
 let current = 0;
-const interval = 5000; // 5 seconds per slide
+const interval = 5000;
 
 const slideshow = document.getElementById("slideshow");
 
@@ -24,20 +24,16 @@ images.forEach(src => {
 // Set first image
 slideshow.style.backgroundImage = `url('${images[0]}')`;
 
-// Slideshow loop with film grain dissolve
+// -------------------------
+// 3. SLIDESHOW LOOP
+// -------------------------
 setInterval(() => {
     current = (current + 1) % images.length;
 
-    // fade out
-    slideshow.style.opacity = 0;
-    slideshow.style.filter = "blur(2px) brightness(1.1)";
+    slideshow.style.filter = "blur(2px)";
 
     setTimeout(() => {
-        // switch image
         slideshow.style.backgroundImage = `url('${images[current]}')`;
-
-        // fade in
-        slideshow.style.opacity = 1;
-        slideshow.style.filter = "blur(0px) brightness(1.0)";
-    }, 1800); // match CSS transition
+        slideshow.style.filter = "blur(0px)";
+    }, 200);
 }, interval);
