@@ -25,10 +25,10 @@ body, html {
 /* Spotify player stays above slideshow */
 #spotify-player {
     position: fixed;
-    bottom: 20px;
+    bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: 320px;
     z-index: 10;  /* always on top */
 }
 
