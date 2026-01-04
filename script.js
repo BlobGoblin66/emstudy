@@ -2,10 +2,9 @@
 // 1. IMAGES LIST
 // -------------------------
 const images = [
-    "images/pic1.jpg",
-    "images/pic2.jpg",
-    "images/pic3.jpg",
-    "images/pic4.jpg"
+    "images/pic1.gif",
+    "images/pic2.gif",
+    "images/pic3.gif",
 ];
 
 // -------------------------
