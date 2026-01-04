@@ -20,28 +20,16 @@ body, html {
     background-position: center;
     transition: opacity 1.8s ease-in-out, filter 1.8s ease-in-out;
     opacity: 1;
+    z-index: 1;   /* bottom layer */
 }
 
-/* Grain overlay */
-#grain {
-    pointer-events: none;
-    position: fixed;
-    inset: 0;
-    background-image: url('images/grain.png'); /* <-- replace with your hosted grain image */
-    background-size: cover;
-    mix-blend-mode: overlay;
-    opacity: 0.18;
-    animation: grainFlicker 0.6s steps(2, end) infinite;
-    z-index: 5; /* above slideshow but below Spotify */
-}
-
-/* Optional flicker */
-@keyframes grainFlicker {
-    0% { opacity: 0.15; filter: brightness(1.05); }
-    100% { opacity: 0.20; filter: brightness(0.98); }
-}
-
-/* Spotify iframe styling */
+/* Spotify player stays above slideshow */
 #spotify-player {
-    /* already set inline in HTML for simplicity */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    z-index: 10;  /* always on top */
 }
+
